@@ -89,7 +89,25 @@ public class Student
      */
     public String getLoginName()
     {
-        return name.substring(0,4) + id.substring(0,3);
+        String shortName;
+        String shortID;
+        if (name.length() < 4)
+        {
+            shortName = name;
+        }
+        else 
+        {
+            shortName = name.substring(0,4);
+        }
+        if (id.length() < 3)
+        {
+            shortID = id;
+        }
+        else
+        {
+            shortID = id.substring(0,3);
+        }
+        return shortName + shortID;
     }
     
     /**
