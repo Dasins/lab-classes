@@ -20,9 +20,26 @@ public class Student
      */
     public Student(String fullName, String studentID)
     {
-        name = fullName;
-        id = studentID;
-        credits = 0;
+       name = fullName;
+       if (fullName.length() < 4)
+       {
+           System.out.println("");
+           System.out.println("########################");
+           System.out.println("NAME ERROR." );
+           System.out.println("The entered name contains less than 4 characters.");
+           System.out.println("");
+       }
+       id = studentID;
+       if (studentID.length() < 3)
+       {
+           System.out.println("");
+           System.out.println("STUDENT ID ERROR." );
+           System.out.println("The entered ID contains less than 3 numbers.");
+           System.out.println("");
+       }
+       System.out.println("########################");
+       System.out.println("");
+       credits = 0;
     }
 
     /**
