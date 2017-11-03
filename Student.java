@@ -24,7 +24,6 @@ public class Student
        if (fullName.length() < 4)
        {
            System.out.println("");
-           System.out.println("########################");
            System.out.println("NAME ERROR." );
            System.out.println("The entered name contains less than 4 characters.");
            System.out.println("");
@@ -37,8 +36,6 @@ public class Student
            System.out.println("The entered ID contains less than 3 numbers.");
            System.out.println("");
        }
-       System.out.println("########################");
-       System.out.println("");
        credits = 0;
     }
 
@@ -89,24 +86,18 @@ public class Student
      */
     public String getLoginName()
     {
-        String shortName;
-        String shortID;
-        if (name.length() < 4)
-        {
-            shortName = name;
-        }
-        else 
+        String shortName = name;
+        String shortID = id;
+        // If the length of name is more than 4. Take 4 characters.
+        if (name.length() > 4)
         {
             shortName = name.substring(0,4);
         }
-        if (id.length() < 3)
+        // If the length of name is more than 3. Take 3 characters.
+        if (id.length() > 3)
         {
-            shortID = id;
-        }
-        else
-        {
-            shortID = id.substring(0,3);
-        }
+           shortID = id.substring(0,3);
+        } 
         return shortName + shortID;
     }
     
